@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.TrackDetailActivity">
+
+    <ImageView
+        android:id="@+id/trackImgIV"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[2]" />
+
+    <TextView
+        android:id="@+id/trackNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/trackImgIV"
+        app:layout_constraintStart_toStartOf="@+id/trackImgIV"
+        app:layout_constraintTop_toBottomOf="@+id/trackImgIV" />
+
+    <TextView
+        android:id="@+id/trackArtistTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/trackNameTV"
+        app:layout_constraintStart_toStartOf="@+id/trackNameTV"
+        app:layout_constraintTop_toBottomOf="@+id/trackNameTV" />
+
+    <TextView
+        android:id="@+id/trackAlbumTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/trackArtistTV"
+        app:layout_constraintStart_toStartOf="@+id/trackArtistTV"
+        app:layout_constraintTop_toBottomOf="@+id/trackArtistTV" />
+
+    <TextView
+        android:id="@+id/trackDurationTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/trackAlbumTV"
+        app:layout_constraintStart_toStartOf="@+id/trackAlbumTV"
+        app:layout_constraintTop_toBottomOf="@+id/trackAlbumTV" />
+
+    <Button
+        android:id="@+id/trackHearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Escucha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="#0D2FEB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trackDurationTV" />
+</androidx.constraintlayout.widget.ConstraintLayout>
