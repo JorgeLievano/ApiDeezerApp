@@ -77,4 +77,10 @@ public class Track implements Serializable {
     public String getYearRelease(){
         return release_date.toString().split(" ")[5];
     }
+
+    public String durantionMinSec(){
+        int min =(int)duration/60;
+        int sec= duration-(60*min);
+        return ""+min+" : "+sec;
+    }
 }

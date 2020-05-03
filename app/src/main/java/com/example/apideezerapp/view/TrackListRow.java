@@ -29,8 +29,8 @@ public  class TrackListRow extends RecyclerView.ViewHolder {
 
     public void setInfo(TrackList item){
         listNameTV.setText(item.getTitle());
-        userNameTV.setText(item.getUser().getName());
-        listItemsTV.setText(""+item.getNb_tracks());
+        userNameTV.setText("Usuario: "+item.getUser().getName());
+        listItemsTV.setText("Tracks: "+item.getNb_tracks());
         Glide.with(itemView).load(item.getPicture()).fitCenter().into(listImgSmallIV);
     }
 }

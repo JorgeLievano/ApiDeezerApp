@@ -29,9 +29,9 @@ public class TrackControl implements View.OnClickListener {
 
 
             activity.getTrackNameTV().setText(""+track.getTitle());
-            activity.getTrackAlbumTV().setText(""+track.getAlbum().getTitle());
-            activity.getTrackArtistTV().setText(""+track.getArtist().getName());
-            activity.getTrackDurationTV().setText(""+track.getDuration());
+            activity.getTrackAlbumTV().setText("Album: "+track.getAlbum().getTitle());
+            activity.getTrackArtistTV().setText("Artista: "+track.getArtist().getName());
+            activity.getTrackDurationTV().setText("Duración: "+track.durantionMinSec());
             Glide.with(activity).load(track.getAlbum().getCover()).fitCenter().into(activity.getTrackImgIV());
             activity.getTrackHearBtn().setOnClickListener(this);
             uri=Uri.parse(track.getLink());
